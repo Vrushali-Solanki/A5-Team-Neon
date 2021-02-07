@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Settings"
-        android:textSize="24dp"
-        android:textColor="@color/black"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/sett_profile"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/circle_text"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:padding="10dp"
+            android:text="@string/profile_update"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/sett_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/circle_text"
+            android:drawableLeft="@drawable/ic_baseline_notifications_24"
+            android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:text="Notifications"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
