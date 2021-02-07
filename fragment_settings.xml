@@ -36,6 +36,19 @@
             android:textColor="@color/black"
             android:textSize="24dp" />
 
+        <TextView
+            android:id="@+id/sett_language"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/circle_text"
+            android:drawableLeft="@drawable/ic_baseline_language_24"
+            android:padding="10dp"
+            android:text="Language"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
     </LinearLayout>
 
 </RelativeLayout>

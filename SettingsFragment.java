@@ -1,5 +1,6 @@
 package com.example.childvaccine;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,9 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class SettingsFragment extends Fragment {
+
+    private TextView profileUpdate,notification,language;
+
     
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,13 +61,52 @@ public class SettingsFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+
+        Intent intent=new Intent(getActivity(),UserProfileActivity.class);
+        startActivity(intent);
+
+        View v=inflater.inflate(R.layout.fragment_settings, container, false);
+
+        profileUpdate=v.findViewById(R.id.sett_profile);
+        notification=v.findViewById(R.id.sett_notifications);
+        language=v.findViewById(R.id.sett_language);
+
+        profileUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),UserProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        language.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),LanguageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+        return v;
     }
 }
